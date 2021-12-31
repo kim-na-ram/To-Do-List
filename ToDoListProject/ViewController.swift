@@ -86,7 +86,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         list[indexPath.row].isComplete = true
         let item = list[indexPath.row]
         
-        let dialog = UIAlertController(title: item.title, message: "\(item.content)을(를) 완료했습니다.", preferredStyle: .alert)
+        var message : String? = nil
+        
+        // content가 nil인지, isEmpty인지 검사
+        if let content = item.content, content.isEmpty {
+            message = "할 일을 완료했습니다."
+        } else {
+            message = "'\(item.content!)' 을(를) 완료했습니다."
+        }
+    
+        let dialog = UIAlertController(title: item.title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
         dialog.addAction(action)
         self.present(dialog, animated: true, completion: nil)
