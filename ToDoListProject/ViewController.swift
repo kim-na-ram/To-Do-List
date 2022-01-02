@@ -57,6 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func editAction(_ sender: Any) {
         // list가 비어있을 때 return
         guard !list.isEmpty else {
+            print("list is Empty")
             return
         }
         self.navigationItem.leftBarButtonItem = doneButton
@@ -79,27 +80,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // 리스트 선택 시 완료된 일로 표시
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         guard !list[indexPath.row].isComplete else {
+            list[indexPath.row].isComplete = false
+            
+            saveAllData()
+            toDoListTableView.reloadData()
+            
             return
         }
-        
+            
         list[indexPath.row].isComplete = true
         let item = list[indexPath.row]
-        
+            
         var message : String? = nil
-        
+            
         // content가 nil인지, isEmpty인지 검사
         if let content = item.content, content.isEmpty {
             message = "할 일을 완료했습니다."
         } else {
             message = "'\(item.content!)' 을(를) 완료했습니다."
         }
-    
+        
         let dialog = UIAlertController(title: item.title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
         dialog.addAction(action)
         self.present(dialog, animated: true, completion: nil)
-        
+
         saveAllData()
         toDoListTableView.reloadData()
     }
@@ -126,9 +133,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         print(type(of: data))
         list = data.map {
-            var title = $0["title"] as? String
-            var content = $0["content"] as? String
-            var isComplete = $0["isComplete"] as? Bool
+            let title = $0["title"] as? String
+            let content = $0["content"] as? String
+            let isComplete = $0["isComplete"] as? Bool
             
             return ToDoList(title: title!, content: content!, isComplete: isComplete!)
         }

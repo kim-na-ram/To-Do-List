@@ -33,8 +33,6 @@ class AddToDoViewController: UIViewController {
         // 'Done' 버튼이 클릭되었을 때 list에 데이터가 append
         let item: ToDoList = ToDoList(title: title, content: content)
         
-        print("Add List title : \(item.title)")
-        
         // ViewController에 생성한 전역변수에 append
         list.append(item)
         
