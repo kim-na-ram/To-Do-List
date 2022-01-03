@@ -18,6 +18,7 @@
 		894E2064277EBC7400E3614D /* ToDoListProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E2063277EBC7400E3614D /* ToDoListProjectUITestsLaunchTests.swift */; };
 		894E2071277EBE3100E3614D /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E2070277EBE3100E3614D /* AddToDoViewController.swift */; };
 		894E2075277EC73D00E3614D /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E2074277EC73D00E3614D /* ToDoList.swift */; };
+		899C1377278279B000D7218F /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C1376278279B000D7218F /* ToDoListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		894E2063277EBC7400E3614D /* ToDoListProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		894E2070277EBE3100E3614D /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 		894E2074277EC73D00E3614D /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
+		899C1376278279B000D7218F /* ToDoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		894E2034277EBC7300E3614D = {
 			isa = PBXGroup;
 			children = (
+				899C1376278279B000D7218F /* ToDoListCell.swift */,
 				894E2074277EC73D00E3614D /* ToDoList.swift */,
 				894E203F277EBC7300E3614D /* ToDoListProject */,
 				894E2056277EBC7400E3614D /* ToDoListProjectTests */,
@@ -269,6 +272,7 @@
 				894E2075277EC73D00E3614D /* ToDoList.swift in Sources */,
 				894E2041277EBC7300E3614D /* AppDelegate.swift in Sources */,
 				894E2043277EBC7300E3614D /* SceneDelegate.swift in Sources */,
+				899C1377278279B000D7218F /* ToDoListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import UIKit
 
 var list = [ToDoList]()
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var toDoListTableView: UITableView!
     @IBOutlet weak var editBarButton: UIBarButtonItem!
@@ -34,24 +34,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         doneButton.style = .plain
         doneButton.target = self
         
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        cell.textLabel?.text = list[indexPath.row].title
-        cell.detailTextLabel?.text = list[indexPath.row].content
-        if list[indexPath.row].isComplete {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
-        
-        return cell
     }
 
     @IBAction func editAction(_ sender: Any) {
@@ -140,5 +122,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return ToDoList(title: title!, content: content!, isComplete: isComplete!)
         }
         
+    }
+}
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ToDoListCell
+        
+        cell.titleLabel?.text = list[indexPath.row].title
+        cell.contentLabel?.text = list[indexPath.row].content
+        
+        if let isContentEmpty = cell.contentLabel.text, isContentEmpty.isEmpty {
+            cell.contentShowLabel.isHidden = true
+        } else {
+            cell.contentShowLabel.isHidden = false
+        }
+        
+        if list[indexPath.row].isComplete {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
+        
+        return cell
     }
 }
