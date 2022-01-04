@@ -148,7 +148,7 @@
                     <navigationItem key="navigationItem" title="To Do List" id="oze-u1-Nlr">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="f0n-od-v6a">
                             <connections>
-                                <action selector="editAction:" destination="VUu-x9-rJj" id="lx4-OD-UMI"/>
+                                <action selector="editAction:" destination="VUu-x9-rJj" id="kvC-Qp-vYm"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="heY-cM-rBR">
@@ -158,7 +158,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="editBarButton" destination="f0n-od-v6a" id="Nam-06-T45"/>
                         <outlet property="toDoListTableView" destination="gb0-ea-9Aj" id="hhg-AE-5F3"/>
                     </connections>
                 </viewController>

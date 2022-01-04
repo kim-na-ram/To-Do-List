@@ -12,7 +12,13 @@ var list = [ToDoList]()
 class ViewController: UIViewController {
 
     @IBOutlet weak var toDoListTableView: UITableView!
-    @IBOutlet weak var editBarButton: UIBarButtonItem!
+    
+    lazy var editBarButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editAction(_:)))
+        
+        return button
+        
+    }()
     
     let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonTap))
     

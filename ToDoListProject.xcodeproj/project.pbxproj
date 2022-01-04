@@ -215,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 894E2038277EBC7300E3614D /* Build configuration list for PBXProject "ToDoListProject" */;
+			buildConfigurationList = 894E2038277EBC7300E3614D /* Build configuration list for PBXProject "	" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -454,6 +454,7 @@
 				DEVELOPMENT_TEAM = 6YA47ZH3WN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToDoListProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ToDoListProject;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -482,6 +483,7 @@
 				DEVELOPMENT_TEAM = 6YA47ZH3WN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToDoListProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ToDoListProject;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -579,7 +581,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		894E2038277EBC7300E3614D /* Build configuration list for PBXProject "ToDoListProject" */ = {
+		894E2038277EBC7300E3614D /* Build configuration list for PBXProject "	" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				894E2065277EBC7400E3614D /* Debug */,
